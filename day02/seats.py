@@ -13,7 +13,7 @@ print()
 """
           
 if customer % col == 0:
-    row = customer // col#int(customer / col)
+    row = customer // col #int(customer / col)
 else:
     row = customer // col + 1
 for i in range(0, row):
