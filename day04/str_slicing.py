@@ -1,0 +1,17 @@
+#문자열 슬라이싱
+s = "20211123cold"
+year = s[:4] #마지막 위치 -1
+day = s[4:8]
+weather = s[8:]
+print(year)
+print(day)
+print(weather)
+
+#주민등록번호
+id_card = "881120-1068234"
+yymmdd = id_card[:6]
+num = id_card[7:]
+num_hidden = '*' * len(num)
+print(yymmdd)
+print(num)
+print(yymmdd + '-' + num_hidden )
