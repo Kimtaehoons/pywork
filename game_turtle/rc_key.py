@@ -1,5 +1,5 @@
 #키보드로 조종하기
-import turtle as t
+import turtle as t #t는 별칭
 
 def turn_right():
     t.setheading(0) #거북이의 머리 0도
@@ -21,11 +21,12 @@ def clear():
     t.clear()
 
 t.shape('turtle')
+t.color('blue')
 t.onkeypress(turn_right, "Right") #오른쪽 방향키 #turn_right은 사용자 정의 함수 등록, Right는 내장 값이라 첫 글자 대문자
 t.onkeypress(turn_up, "Up") #위쪽 방향키
 t.onkeypress(turn_left, "Left") #왼쪽 방향키
 t.onkeypress(turn_down, "Down") #아래 방향키
 t.onkeypress(clear, "Escape") #Esc #선 모두 지우기
-t.listen() #실행 대기
+t.listen() #거북이 그래핑 창이 키보드 입력을 받도록 함
 
 t.mainloop()

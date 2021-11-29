@@ -5,6 +5,7 @@ from myModule import calculator
 #food.py 사용
 food.cook()
 food.eat()
+food.sleep()
 
 #calculator.py 사용
 print(calculator.add(10, 2))

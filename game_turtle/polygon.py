@@ -1,4 +1,4 @@
-#다각형 그리기
+#다각형 그리기(함수 응용)
 import turtle as t
 
 def polygon(n): #n=변의 수
@@ -11,7 +11,7 @@ def polygon2(n, d): #d=거리
         t.forward(d)
         t.left(360/n)
 
-polygon(3)
+polygon(3) #삼각형 실행
 polygon(5)
 t.up() #선 올리기(이어지는 선 안보이기 위함)
 t.forward(100)

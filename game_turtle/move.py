@@ -13,7 +13,7 @@ turtle.forward(100)
 turtle.left(90)
 '''
 
-#위의 것을 for반복문으로 구현
+#위의 것을 for반복문으로 구현(반복문 응용)
 for i in range(4):
 #움직이면서 사각형 만들기
     turtle.forward(100)
