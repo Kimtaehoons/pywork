@@ -5,6 +5,7 @@ from day09.class_lib.vipcustomer import VIPCustomer
 c = Customer(101, "놀부") #Customer객체 생성(from day09.class_lib.customer import Customer)
 g = GoldCustomer(201, "흥부") #GoldCustomer객체 생성(from day09.class_lib.goldcustomer import GoldCustomer)
 v = VIPCustomer(301, "심청", 1004) #VIPCustomer객체 생성(from day09.class_lib.vipcustomer import VIPCustomer)
+#효율적으로 관리하려면 리스트 안으로 넣어야 한다(customer_list.py참고)
 
 #제품 구매
 cost_c = c.calc_price(10000)
