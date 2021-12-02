@@ -1,17 +1,17 @@
 #영어 타자 게임
-import random
+import random as r
 import time
 
-word = ['sky', 'earth', 'moon', 'flower', 'tree',
-        'strawberry', 'grape', 'garlic', 'onion', 'potato']
-#w = random.choice(word) #random모듈 안에 choice함수가 있고 랜덤추출하는 방법
+#단어를 랜덤하게 추출하기
+with open("word.txt", 'r') as f:
+    word = f.readline().split() #한 줄로 공백 제거되고 단어 전체가 공백문자로 구분돼 출력
 
 n = 1 #문제 번호
 input("[타자게임] 준비되면 엔터! ")
 start = time.time()
 while n < 11:
         print('-문제', n)
-        question = random.choice(word) #문제 단어 출제
+        question = r.choice(word) #문제 단어 출제
         print(question)
         answer = input()               #정답 입력
         #통과(+n 증가) 아니면 오타 코드 작성
