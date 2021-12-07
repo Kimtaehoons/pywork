@@ -10,7 +10,7 @@ def create_table():
     cur = conn.cursor()
     sql = """
     CREATE TABLE book(
-        book_no INTEGER PRIMARY KEY AUTOINCREMENT,
+        book_no INTEGER PRIMARY KEY AUTOINCREMENT, #PRIMARY KEY와 AUTOINCREMENT 한 세트
         title TEXT NOT NULL,
         publisher TEXT NOT NULL,
         page INTEGER
@@ -35,7 +35,7 @@ def insert_book():
     conn = getconn()
     cur = conn.cursor()
     sql = "INSERT INTO book (title, publisher, page) VALUES (?, ?, ?)" #book_no는 자동 순번 입력되게끔 했으므로 제외하고 이 제외되면서 employee 뒤에 칼럼명 명시해서 맞춰준다
-    cur.execute(sql, ('점프 투 파이썬', '박응용', 300))
+    cur.execute(sql, ('웹 표준의 정석', '고경희', 600))
     conn.commit()
     conn.close()
 
@@ -70,8 +70,9 @@ def update_book():
 def delete_book():
     conn = getconn()
     cur = conn.cursor()
-    sql = "DELETE FROM book WHERE book_no=?"  #book_no=1인 책 삭제
-    cur.execute(sql, (1,))
+    #sql = "DELETE FROM book WHERE book_no=?"  #book_no=1인 책 삭제
+    sql = "DELETE FROM book" #전체 자료 삭제(번호가 살아있다 그래서 번호를 초기화 시키려면 drop을 써야한다)
+    cur.execute(sql)
     conn.commit()
     conn.close()
 
@@ -79,6 +80,6 @@ if __name__ == "__main__":
     #create_table()
     #insert_book()
     #select_one()
-    update_book()
+    #update_book()
     #delete_book()
-    select_book()
+    #select_book()
