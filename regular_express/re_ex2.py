@@ -11,4 +11,5 @@ str = "123?45yy7890"
 m = re.findall("[0-9]{1,3}", str) #리스트로 반환 findall(정규식, 문자열)
 print(m)
 
-
+m2 = re.findall("[A-z]+", str)
+print(m2)
