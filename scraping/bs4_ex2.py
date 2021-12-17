@@ -19,9 +19,9 @@ html_str = """
 
 #계층구조에 맞게 순서대로 작성해준다
 soup = BeautifulSoup(html_str, "html.parser") #클래스 생성자()안에 매개변수 넣어서 html_str에서 html.parser를 통해
-first_ul = soup.find('ul') #soup를 통해서 find()로 처음 나오는 ul태그를 찾는다
-print(first_ul) #태그 포함 출력
-print(first_ul.text) #태그 제외한 문자열 출력
+first_ul = soup.find('ul', attrs={'class':'item'}) #attrs=속성을 의미하고 딕셔너리로 찾음. 왼쪽에 쓴 코딩이 더 많이 쓰인다. ex1의 first_ul.find('li')와 같은 의미
+all_li = first_ul.find_all('li') #find_all()로 찾은 모든 값을 리스트로 반환
 
-first_li = first_ul.find('li') #first_ul 객체로 li태그로 접근(find함수는 한 개만 가져올 수 있는 한계가 있다)
-print(first_li.text)
+print(all_li)
+print(all_li[1])
+print(all_li[1].text) #정확히 찾아가서 출력
